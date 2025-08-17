@@ -24,12 +24,9 @@ const App = () => {
       "Trip Six HTX"
     ],
     theEnd: [
-      "7126 Lawndale St",
-      "7126 Lawndale St Houston TX 77023",
+      "7124 Lawndale St",
+      "7124 Lawndale St Houston TX 77023",
       "77023",
-      "The Compound",
-      "The Compound HTX",
-      "The Compound Houston",
       "The End",
       "The End HTX"
     ],
