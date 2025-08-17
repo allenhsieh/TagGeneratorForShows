@@ -266,7 +266,7 @@ const App = () => {
           Trip Six
         </button>
         <button onClick={() => handleVenueClick(venues.theEnd)}>
-          The End / The Compound
+          The End
         </button>
         <button onClick={() => handleVenueClick(venues.eighteen)}>
           1810 Ojeman
