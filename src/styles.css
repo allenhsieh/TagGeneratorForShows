@@ -11,9 +11,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1a1a1a;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   color: #ffffff;
   line-height: 1.6;
+  min-height: 100vh;
 }
 
 /* App container */
@@ -32,10 +33,10 @@ body {
 .tag-generator h1 {
   text-align: center;
   margin-bottom: 30px;
-  color: #ff6b6b;
+  color: #4ecdc4;
   font-size: 2.5rem;
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Venue Selector */
@@ -48,7 +49,7 @@ body {
 }
 
 .venue-selector button {
-  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  background: linear-gradient(45deg, #4ecdc4, #44a08d);
   color: white;
   border: none;
   padding: 10px 16px;
@@ -60,7 +61,7 @@ body {
 }
 
 .venue-selector button:hover {
-  background: linear-gradient(45deg, #ff5252, #e53935);
+  background: linear-gradient(45deg, #45b7aa, #3d8b7d);
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -71,9 +72,9 @@ body {
   max-width: 400px;
   padding: 12px 16px;
   font-size: 16px;
-  border: 2px solid #444;
+  border: 2px solid #5a8db5;
   border-radius: 6px;
-  background-color: #2a2a2a;
+  background-color: rgba(255, 255, 255, 0.1);
   color: white;
   margin-bottom: 20px;
   transition: border-color 0.2s ease;
@@ -81,8 +82,8 @@ body {
 
 .band-input:focus {
   outline: none;
-  border-color: #ff6b6b;
-  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+  border-color: #4ecdc4;
+  box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.2);
 }
 
 .band-input::placeholder {
@@ -101,8 +102,8 @@ body {
 
 .tag-item {
   padding: 8px 12px;
-  background-color: #2a2a2a;
-  border: 1px solid #444;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -110,25 +111,26 @@ body {
 }
 
 .tag-item:hover {
-  background-color: #3a3a3a;
-  border-color: #666;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .tag-item.selected {
-  background-color: #ff6b6b;
+  background-color: #4ecdc4;
   color: white;
   font-weight: bold;
-  border-color: #ff6b6b;
+  border-color: #4ecdc4;
 }
 
 .tag-item.default {
-  opacity: 0.6;
+  opacity: 0.7;
   cursor: not-allowed;
+  background-color: rgba(78, 205, 196, 0.3);
 }
 
 .tag-item.default:hover {
-  background-color: #2a2a2a;
-  border-color: #444;
+  background-color: rgba(78, 205, 196, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Selected Tags Section */
@@ -141,7 +143,7 @@ body {
 }
 
 .clear-button {
-  background: linear-gradient(45deg, #666, #555);
+  background: linear-gradient(45deg, #6c9bd1, #5a8db5);
   color: white;
   border: none;
   padding: 8px 16px;
@@ -152,15 +154,15 @@ body {
 }
 
 .clear-button:hover {
-  background: linear-gradient(45deg, #777, #666);
+  background: linear-gradient(45deg, #5a8db5, #4a7ba7);
   transform: translateY(-1px);
 }
 
 .selected-tags-display {
-  background-color: #2a2a2a;
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 15px;
   border-radius: 6px;
-  border: 1px solid #444;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   word-wrap: break-word;
   line-height: 1.5;
 }
@@ -172,23 +174,23 @@ body {
 
 .output-section {
   margin-bottom: 30px;
-  background-color: #2a2a2a;
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 8px;
-  border: 1px solid #444;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .output-section h3 {
-  color: #ff6b6b;
+  color: #4ecdc4;
   margin-bottom: 10px;
   font-size: 1.2rem;
 }
 
 .output-content {
-  background-color: #1a1a1a;
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 15px;
   border-radius: 4px;
-  border: 1px solid #333;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: 15px;
   word-wrap: break-word;
   white-space: pre-wrap;
@@ -198,7 +200,7 @@ body {
 }
 
 .copy-button {
-  background: linear-gradient(45deg, #4caf50, #45a049);
+  background: linear-gradient(45deg, #66d9a6, #52c999);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -210,7 +212,7 @@ body {
 }
 
 .copy-button:hover {
-  background: linear-gradient(45deg, #45a049, #3e8e41);
+  background: linear-gradient(45deg, #52c999, #44b082);
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -250,6 +252,6 @@ body {
 hr {
   border: none;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
+  background: linear-gradient(90deg, transparent, #4ecdc4, transparent);
   margin: 30px 0;
 }
