@@ -1,11 +1,4 @@
 export const defaultSelectedTags = [
-  "Houston",
-  "Houston Texas",
-  "Texas",
-  "HTX",
-  "TX",
-  "Houston TX",
-  "Harris County",
   "Music",
   "Punk",
   "Punk Rock",

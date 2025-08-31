@@ -1,4 +1,13 @@
 export const venues = {
+  houston: [
+    "Houston",
+    "Houston Texas",
+    "Texas",
+    "HTX",
+    "TX",
+    "Houston TX",
+    "Harris County"
+  ],
   tripSix: [
     "6230 Rupley Cir",
     "6230 Rupley Cir Houston TX 77087",
@@ -29,5 +38,20 @@ export const venues = {
     "Austin",
     "Mohawk Austin",
     "Mohawk ATX"
+  ],
+  whiteSwanLive: [
+    "White Swan Live",
+    "White Swan",
+    "1306 Nance St",
+    "1306 Nance St Houston TX 77002",
+    "77002",
+    "White Swan HTX"
+  ],
+  austin: [
+    "Austin",
+    "Austin Texas",
+    "Austin TX",
+    "ATX",
+    "Texas"
   ]
 }
