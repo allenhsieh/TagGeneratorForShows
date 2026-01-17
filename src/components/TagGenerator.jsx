@@ -5,6 +5,7 @@ import { startCaseWords, generateHashtags, generateSemicolonSeparated, generateC
 import VenueSelector from './VenueSelector.jsx'
 import TagList from './TagList.jsx'
 import OutputSection from './OutputSection.jsx'
+import ArchiveLinkGenerator from './ArchiveLinkGenerator.jsx'
 
 const TagGenerator = () => {
   const [selectedTags, setSelectedTags] = useState([...defaultSelectedTags])
@@ -191,6 +192,7 @@ const TagGenerator = () => {
               content={generatedComma}
             />
           )}
+          <ArchiveLinkGenerator selectedTags={selectedTags} bandName={bandName} />
         </div>
       )}
     </div>

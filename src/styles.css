@@ -255,3 +255,7 @@ hr {
   background: linear-gradient(90deg, transparent, #4ecdc4, transparent);
   margin: 30px 0;
 }
+
+.generated-link a {
+  word-break: break-all;
+}

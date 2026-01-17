@@ -4,7 +4,7 @@ const VenueSelector = ({ onVenueSelect }) => {
   return (
     <div className="venue-selector">
       <b>Venue: </b>
-      <button onClick={() => onVenueSelect(venues.houston)}>
+      {/* <button onClick={() => onVenueSelect(venues.houston)}>
         Houston
       </button>
       <button onClick={() => onVenueSelect(venues.tripSix)}>
@@ -24,6 +24,15 @@ const VenueSelector = ({ onVenueSelect }) => {
       </button>
       <button onClick={() => onVenueSelect(venues.mohawk)}>
         Mohawk Austin
+      </button> */}
+      <button onClick={() => onVenueSelect(venues.highLimitRoom)}>
+        High Limit Room
+      </button>
+      <button onClick={() => onVenueSelect(venues.turnTurnTurn)}>
+        Turn! Turn! Turn!
+      </button>
+      <button onClick={() => onVenueSelect(venues.blackWaterBar)}>
+        Black Water Bar
       </button>
     </div>
   )
