@@ -171,7 +171,7 @@ const TagGenerator = () => {
       </div>
 
       <hr />
-
+      <ArchiveLinkGenerator selectedTags={selectedTags} bandName={bandName} />
       {hasAdditionalTags && (
         <div className="output-sections">
           {generatedHashtags && (
@@ -192,7 +192,6 @@ const TagGenerator = () => {
               content={generatedComma}
             />
           )}
-          <ArchiveLinkGenerator selectedTags={selectedTags} bandName={bandName} />
         </div>
       )}
     </div>

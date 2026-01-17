@@ -1,36 +1,37 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const ArchiveLinkGenerator = ({ selectedTags, bandName }) => {
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
-  const [generatedLink, setGeneratedLink] = useState('');
+  const [generatedLink, setGeneratedLink] = useState("");
 
   useEffect(() => {
     const generateLink = () => {
-      const baseUrl = 'https://archive.org/upload';
-const params = new URLSearchParams();
+      const baseUrl = "https://archive.org/upload";
+      const params = new URLSearchParams();
 
-params.append('default_mediatype', 'audio');
-      params.append('collection', 'community');
+      params.append("mediatype", "movies");
+      params.append('collection', 'opensource_movies');
 
       if (bandName) {
-        params.append('creator', bandName);
-        params.append('title', `${bandName} on ${date}`);
+        params.append("title", `${bandName} on ${date}`);
+        params.append("description", `${bandName} on ${date}`);
       } else {
-          params.append('title', `Live recording from ${date}`);
+        params.append("title", `Live recording from ${date}`);
+        params.append("description", `Live recording from ${date}`);
       }
 
       if (selectedTags && selectedTags.length > 0) {
-        params.append('subject', selectedTags.join(';'));
+        params.append("subject", selectedTags.join(";"));
       }
 
-      params.append('date', date);
+      params.append("date", date);
+      params.append("language", "eng");
 
       setGeneratedLink(`${baseUrl}?${params.toString()}`);
     };
 
     generateLink();
   }, [date, bandName, selectedTags]);
-
 
   return (
     <div className="output-section">
