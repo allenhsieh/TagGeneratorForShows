@@ -1,7 +1,7 @@
 {
-  "name": "tag-generator-for-shows",
+  "name": "tag-generator-for-concerts",
   "version": "2.0.0",
-  "homepage": "https://allenhsieh.github.io/TagGeneratorForShows/",
+  "homepage": "https://allenhsieh.github.io/tagGeneratorForConcerts/",
   "description": "A modern tag generator for punk, hardcore, and metal music social media posts",
   "keywords": ["react", "punk", "hardcore", "metal", "tags", "social-media", "instagram", "archive.org"],
   "main": "src/index.js",
