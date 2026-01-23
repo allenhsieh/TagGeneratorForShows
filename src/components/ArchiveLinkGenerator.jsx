@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const ArchiveLinkGenerator = ({ selectedTags, bandName }) => {
+const ArchiveLinkGenerator = ({ selectedTags, bandName, venueName }) => {
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
   const [generatedLink, setGeneratedLink] = useState("");
 
@@ -9,15 +9,15 @@ const ArchiveLinkGenerator = ({ selectedTags, bandName }) => {
       const baseUrl = "https://archive.org/upload";
       const params = new URLSearchParams();
 
-      params.append("mediatype", "movies");
+      // params.append("mediatype", "movies");
       params.append('collection', 'opensource_movies');
 
       if (bandName) {
-        params.append("title", `${bandName} on ${date}`);
-        params.append("description", `${bandName} on ${date}`);
+        params.append("title", `${bandName} @ ${venueName} on ${date}`);
+        params.append("description", `${bandName} @ ${venueName} on ${date}`);
       } else {
-        params.append("title", `Live recording from ${date}`);
-        params.append("description", `Live recording from ${date}`);
+        params.append("title", `Live recording @ ${venueName} on ${date}`);
+        params.append("description", `Live recording @ ${venueName} on ${date}`);
       }
 
       if (selectedTags && selectedTags.length > 0) {
@@ -26,6 +26,7 @@ const ArchiveLinkGenerator = ({ selectedTags, bandName }) => {
 
       params.append("date", date);
       params.append("language", "eng");
+      params.append("venue", venueName)
 
       setGeneratedLink(`${baseUrl}?${params.toString()}`);
     };

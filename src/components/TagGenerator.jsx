@@ -13,6 +13,8 @@ const TagGenerator = () => {
   const [generatedSemicolon, setGeneratedSemicolon] = useState('')
   const [generatedComma, setGeneratedComma] = useState('')
   const [bandName, setBandName] = useState('')
+  const [storedBandName, setStoredBandName] = useState('')
+  const [venueName, setVenueName] = useState('')
 
   const clickTimeoutRef = useRef(null)
   const draggingRef = useRef(false)
@@ -31,6 +33,7 @@ const TagGenerator = () => {
         bandNameStartCase
       ].sort()
       setSelectedTags(updatedTags)
+      setStoredBandName(bandNameStartCase)
       setBandName('')
     }
   }
@@ -58,13 +61,15 @@ const TagGenerator = () => {
       const filteredPrevTags = prevTags.filter(
         (tag) => !Object.values(venues).flat().includes(tag)
       )
-  
+      
       const updatedTags = [
         ...defaultSelectedTags,
         ...filteredPrevTags,
         ...venueTags
       ]
-  
+      
+      setVenueName(venueTags[0])
+
       return [...new Set(updatedTags)]
     })
   }, [])
@@ -171,7 +176,7 @@ const TagGenerator = () => {
       </div>
 
       <hr />
-      <ArchiveLinkGenerator selectedTags={selectedTags} bandName={bandName} />
+      <ArchiveLinkGenerator selectedTags={selectedTags} bandName={storedBandName} venueName={venueName}/>
       {hasAdditionalTags && (
         <div className="output-sections">
           {generatedHashtags && (
